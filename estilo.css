@@ -1,0 +1,70 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #111, #222);
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* Título */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #e50914;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Container dos álbuns */
+.albums {
+  display: flex;
+  flex-direction: column; /* Empilhado por padrão */
+  align-items: center;
+  gap: 30px;
+}
+
+/* Estilo das capas */
+.albums a img {
+  width: 80vw; /* Ocupa 80% da largura da tela */
+  max-width: 280px; /* Tamanho máximo */
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+.albums a:nth-child(1) img:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 10px 25px rgba(229, 9, 20, 0.7);
+}
+
+.albums a:nth-child(2) img:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 10px 25px rgba(255, 140, 0, 0.7);
+}
+
+/* Media Query para telas maiores (tablets e desktops) */
+@media (min-width: 600px) {
+  .albums {
+    flex-direction: row; /* Lado a lado em telas maiores */
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .albums a img {
+    width: 260px; /* Tamanho fixo para telas maiores */
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
